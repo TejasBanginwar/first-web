@@ -1,0 +1,461 @@
+html,body{
+    height:100%;
+    width:100%;
+    
+}
+
+
+.nav{
+    height:103px;
+    width:100%;
+    
+    display:flex;
+    justify-content: space-between;
+    margin-top:20px;
+    position: relative;
+}
+
+.nav2{
+    display:flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+@font-face{
+    font-family:"futura";
+    src:url("Futura-Bold.ttf");
+}
+
+@font-face{
+    font-family:"futural";
+    src:url("futurabookfont.ttf");
+}
+
+
+
+a{
+    text-decoration:none;
+    font-family:"futural";
+    margin:25px;
+    color: black;
+    font-size:12px;
+    font-weight:100;
+    
+    position:relative;
+
+}
+a:after{
+    content:"";
+    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    
+}
+
+a:hover{
+    color: gray;
+}
+
+a:hover:after{
+    width: 100%; 
+    left: 0; 
+}
+
+i{
+    margin:25px;
+}
+h1{
+    font-family:"futura";
+    font-size:34vh;
+    font-weight:500;
+    line-height:40px;
+    letter-spacing: -10px;
+    position: relative;
+}
+.videocon{
+    height:100vh;
+    width:100vw;
+    
+    position: relative;
+    object-fit:cover;
+    
+}
+
+video{
+    width:100vw;
+    z-index:0;
+    opacity:1;
+    position: relative;
+    cursor: none;
+}
+.play{
+   height:100px;
+    background-color:black;
+   width:100px;
+   top:1px;
+   left:1px;
+   position:fixed;
+   z-index:1;
+   scale:0;
+   opacity:0;
+   transform: translate(-50%, -50%);
+   border-radius:50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+p{
+    color: white;
+    font-family:"futura";
+}
+
+.overlay{
+    height:100%;
+    width:100%;
+    background-color:transparent;
+    position: absolute;
+    z-index:1;
+}
+
+.cont{
+    margin-top:50px;
+    height:95vh;
+    width:100%;
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.subcon{
+    width:31vw;
+    height:95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+img{
+    width:31vw;
+    height:95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown{
+    height:50px;
+    width:20vw;
+    border-radius:40px;
+    background-color: beige;
+    display: flex;
+
+    align-items: center;
+    justify-content:space-between;
+    padding-left:20px;
+    padding-right:20px;
+    z-index:100;
+}
+
+
+#first{
+    background-image: url("DSC0079_Dexter Kim.jpg");
+    
+}
+
+#second{
+    background-image: url("Rectangle 220.png");
+
+    
+}
+
+#third{
+    background-image:url("JTG_2919 copy.jpg");
+}
+
+svg{
+    height:10px;
+    width:10px;
+}
+
+
+.droptext{
+    color: black;
+    font-family:"futural";
+    font-size:12px;
+    font-weight: 400;
+
+    
+   
+}
+.dropa{
+    color: black;
+    font-family:"futural";
+    font-size:12px;
+    font-weight:bold;
+}
+
+.drophid{
+    height:0px;
+    width:22.6vw;
+    border-radius:0 0 40px 40px;
+    background-color: beige;
+    position: absolute;
+    translate:0 -25px;
+    display: block;
+    
+    z-index: -1;
+    transition: height 0.3s ease-in;
+    
+    
+}
+
+.wholedrop{
+    
+    
+    z-index:9;
+}
+
+
+.div1{
+   height: 100px;
+   width:100px;
+   background-color: black;
+   
+}
+
+
+.subcon .wholedrop:hover .drophid{
+    height:25vh;
+    display:block;
+} 
+
+.subtext{
+    height:35vh;
+    margin-top:10vh;
+    
+    display:flex;
+}
+
+.subtext .big{
+    display:flex;
+    width:66%;
+    margin-top:0px;
+    
+
+}
+.subtext .small{
+    display:flex;
+    justify-content:space-between;
+    width:33%;
+    margin-top:0px;
+    padding-left:15px;
+    flex-direction: column;
+    
+    
+}
+.subtext p{
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
+    width:70%;
+    font-size:16px;
+    margin-top: 0;
+    
+}
+
+.subtext a{
+    margin-top:0px;
+    margin-left: 0px;
+}
+
+.subtext .big p{
+    width:734px;
+    font-family:"futura";
+    
+    font-size:7vh;
+    text-transform: uppercase;
+    line-height:50px;
+    padding-left:20px;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 1fr;
+    column-gap:40px;
+    row-gap:40px;
+    height:700px;
+    width:50vw;
+    
+
+
+
+}
+
+#box1{
+    grid-column-start:0;
+    grid-column-end:1;
+    grid-row-start:0;
+    grid-row-end:1;
+
+    box-sizing: border-box;
+}
+
+#box2{
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:0;
+    grid-row-end:1;
+ 
+}
+
+#box3{
+    grid-column-start:0;
+    grid-column-end:1;
+    grid-row-start:1;
+    grid-row-end:2;
+  
+}
+
+
+#box4{
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:1;
+    grid-row-end:2;
+
+}
+
+
+.imagebox{
+    height:600px;
+    width:100%;
+    display:flex;
+    margin-bottom:0px;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+
+.grid img{
+    height:100%;
+    width:75%;
+    margin-bottom:0px;
+    z-index:10;
+    ;
+}
+
+.textbox{
+    height:50px;
+    width:100%;
+    
+    margin-top:50px;
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction:column;
+    align-items: center;
+    
+
+}
+
+.textbox p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:black;
+    
+    
+}
+
+.price{
+    font-family: Helvetica, sans-serif;
+    font-size:9px;
+    
+}
+
+.transcur{
+  height:200px;
+  width:200px;
+  position: fixed;
+  border-radius:50%;
+  top:1px;
+  left:1px;
+  background-color:rgba(128, 128, 128, 0.216);
+  opacity:0;
+  scale:0;
+  z-index:0 ;
+  transform:translate(-50%,-50%);
+}
+
+.overlay{
+    height:1500px;
+    width:100%;
+    background-color:transparent;
+    position: absolute;
+}
+
+.overlay2{
+    height:100vh;
+    width:100vw;
+    background-color:transparent;
+    position: absolute;
+    z-index:2;
+    
+}
+
+.new{
+    height:1000px;
+    width:100vw;
+    margin-top:600px;
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+    flex-direction: column;
+}
+.new p{
+    color: black;
+    font-size:65px;
+    font-family:"futura";
+    width:1182px;
+    display:inline-block;
+    margin:0px 0px 0px 0px;
+    text-transform: uppercase;
+    line-height:50px;
+    margin-left:80px;
+}
+
+.final{
+   background-color: black;
+   color: white;
+    height:50px;
+    width:300px;
+    border-radius:40px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top:50px;
+}
+
+.final:hover{
+    color: gray;
+}
+
+.logo{
+    height:70px;
+    width:70px;
+}
+
+*{
+    padding: 0px;
+    margin: none;
+}
+
